@@ -1,0 +1,42 @@
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.todoLogo {
+  display: flex;
+  flex-direction: row;
+  color: rgb(8, 8, 151);
+}
+.todoLogo1 {
+  animation: To_word 2s infinite;
+  position: relative;
+}
+.todoLogo2 {
+  animation: Do_word 2s infinite;
+  position: relative;
+}
+
+@keyframes To_word {
+
+    from {top: 0px;}
+    to {top: 30px;}
+}
+@keyframes To_word {
+
+  from {top: 30px;}
+  to {top: 0px;}
+}
