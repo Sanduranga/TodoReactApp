@@ -1,0 +1,29 @@
+.container {
+    height: 500px;
+    background-color: rgb(181, 196, 191);
+    margin: 0;
+    overflow-y: auto;
+}
+
+.list {
+    margin: 0 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px; 
+}
+.checkBtn {
+    margin-right: 10px;
+}
+
+.editBtn {
+    margin-right: 10px;
+    background-color: rgb(26, 97, 74);
+    font-weight: bold;
+    padding: 10px;
+}
+.deletBtn {
+    background-color: rgb(194, 29, 29);
+    font-weight: bold;
+    padding: 10px;
+}

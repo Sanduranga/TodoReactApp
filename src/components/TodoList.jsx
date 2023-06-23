@@ -1,36 +1,40 @@
 import React, { useState } from 'react'
+import './todoList.css'
 
-export default function TodoList({saveList, totalTasks, deletedIndex, editedIndex}) {
+export default function TodoList({saveList, checkIndex, deletedIndex, editedIndex}) {
 
-  const [checkCount, setCheckCount] = useState(0)
-
-    const handleDelete = (index) => {
-      deletedIndex(index) 
+    const handleDelete = (deleteId) => {
+      deletedIndex(deleteId) 
     }
 
-    const handleEdit = (index) => {
-      editedIndex(index)
+    const handleEdit = (editId) => {
+      editedIndex(editId)
     }
 
-    const handleCheck = (e) => {
-      console.log(e.target.checked)
-      e.target.checked ? setCheckCount(checkCount+1) : setCheckCount(checkCount-1)
+    const handleCheck = (checkId) => {
+      checkIndex(checkId)
     }
 
   return (
-    <div>
+    <div className='container'>
         <ul>
             {saveList.map((item, index)=>(
-                <li key={index}>
-                  {item}
-                  <input type='checkbox' name='check' onChange = { (e)=> handleCheck(e) }></input>
-                  <button onClick={ ()=> handleEdit(index) }>Edit</button>
-                  <button onClick={ ()=> handleDelete(index) }>Delete</button>
+                <li className='list' key={index}>
+                  <div>
+                    <strong>User Id :</strong> {item.userId}<br/>
+                    <strong>Id :</strong> {item.id}<br/>
+                    <strong>Title :</strong> {item.title}<br/>
+                    
+                  </div>
+                  <div>
+                    <input className='checkBtn' type='checkbox' name='check' checked = {item.completed} onChange = { ()=> handleCheck(item.id) }></input>
+                    <button className='editBtn' onClick={ ()=> handleEdit(item.id) }>Edit</button>
+                    <button className='deletBtn' onClick={ ()=> handleDelete(item.id) }>Delete</button>
+                  </div>     
                 </li>
             )) }
             
         </ul>
-        <strong>Your success percentage is : {(checkCount/totalTasks*100)}% </strong>
     </div>
   )
 }

@@ -1,3 +1,18 @@
 .container {
     margin-top: 40px;
 }
+
+.container form {
+    background-color: rgb(140, 133, 133);
+    margin:20px 20px;
+}
+.updateBtn {
+    padding: 10px;
+    margin-left: 20px;
+    background-color: rgb(23, 101, 9);
+}
+.submitBtn {
+    padding: 10px;
+    margin-left: 20px;
+    background-color: rgb(34, 34, 168);
+}

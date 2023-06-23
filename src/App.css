@@ -9,12 +9,13 @@
   margin: 0;
   padding: 0;
 }
+
 #container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .todoLogo {
   display: flex;
@@ -31,12 +32,6 @@
 }
 
 @keyframes To_word {
-
-    from {top: 0px;}
-    to {top: 30px;}
-}
-@keyframes To_word {
-
   from {top: 30px;}
   to {top: 0px;}
 }
